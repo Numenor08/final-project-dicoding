@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/search.css" />
+    <link rel="stylesheet" href="./css/book.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <title>Bookshelf Apps</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div>
+        <h1 class="header__title">Bookshelf Apps</h1>
+        <h2 class="header__author">By Athaya Razan Zaidan</h2>
+      </div>
+      <button id="header-button" class="header-button">Lets Go!</button>
+    </header>
+    <main class="main">
+      <h1>Bookshelf Apps</h1>
+      <section class="section-form">
+        <div class="form-container">
+          <h2>Input New Book</h2>
+          <form class="form">
+            <div class="form-group">
+              <input
+                class="input"
+                type="text"
+                id="title"
+                name="title"
+                maxlength="25"
+                required
+              />
+              <label class="label" for="title">Title</label>
+            </div>
+            <div class="form-group">
+              <input
+                class="input"
+                type="text"
+                id="author"
+                name="title"
+                maxlength="20"
+                required
+              />
+              <label class="label" for="author">Author</label>
+            </div>
+            <div class="form-group">
+              <input
+                class="input"
+                type="number"
+                id="year"
+                name="title"
+                maxlength="20"
+                required
+              />
+              <label class="label" for="year">Release (Year)</label>
+            </div>
+            <div class="form-group">
+              <label class="checkbox-label" for="vehicle1">Have you read it to the end?</label><br>
+              <input class="checkbox" type="checkbox" id="read" name="isRead" value="read">
+            </div>
+            <input
+              id="btn-form"
+              class="btn submit"
+              type="submit"
+              value="Submit"
+              name="submit"
+            />
+          </form>
+        </div>
+        <div class="search-container">
+          <h2>Search your books</h2>
+          <div class="search-group">
+            <input class="input-search" type="text" name="search" id="search" />
+            <label class="label-search" for="search">Search</label>
+            <button id="search-button" class="btn search">Search</button>
+          </div>
+        </div>
+      </section>
+      <section class="section-book">
+        <div class="book-container">
+          <h2>Not finished reading yet</h2>
+          <div id="unfinish" class="book-list">
+            <!-- <div class="bookGroup">
+              <div>
+                <h3 class="book__title">The Lord of The Rings</h3>
+                <h4 class="book__author">Author: BlablaBla</h4>
+                <h4 class="book__author">Year: 2000</h4>
+              </div>
+              <div>
+                <div class="btn2">
+                  <img src="./img/done-mini-1484-svgrepo-com.svg" alt="logo-done">
+                </div>
+                <div class="btn2">
+                  <img src="./img/edit-svgrepo-com.svg" alt="logo-edit">
+                </div>
+                <div class="btn2">
+                  <img src="./img/delete-svgrepo-com.svg" alt="logo-delete">
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="book-container">
+          <h2>Have finished reading</h2>
+          <div id="finish" class="book-list"></div>
+        </div>
+      </section>
+      <div class="popup">The bookshelves have been updated</div>
+    </main>
+    <footer class="footer-container">
+      <h2>Copyright: ©️2024; Designed by Athaya Razan Zaidan</h2>
+    </footer>
+    <dialog id="editModal" class="modal">
+      <form class="modal-form" method="dialog">
+        <h2>Edit Book</h2>
+        <div class="modal-group">
+          <input class="input-search edit" maxlength="25" type="text" id="editTitle">
+          <label class="label-search" for="editTitle">Title:</label>
+        </div>
+        <div class="modal-group">
+          <input class="input-search edit" maxlength="20" type="text" id="editAuthor">
+          <label class="label-search" for="editAuthor">Author:</label>
+        </div>
+        <div class="modal-group">
+          <input class="input-search edit" type="number" id="editYear">
+          <label class="label-search" for="editYear">Year:</label>
+        </div>
+        <div class="modal-btn">
+          <button class="btn modedit" id="editCancelButton" type="button">Cancel</button>
+          <button class="btn modedit" id="editOkButton" type="submit">OK</button>
+        </div>
+      </form>
+    </dialog>
+    <script src="./js/header.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

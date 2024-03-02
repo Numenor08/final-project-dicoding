@@ -1,0 +1,13 @@
+.footer-container {
+    background-color: black;
+    /* margin-top: 5rem; */
+    padding-block: 0.5rem;
+}
+
+.footer-container > * {
+    color: white;
+    font-family: var(--font-1);
+    font-weight: lighter;
+    font-size: 1rem;
+    text-align: center;
+}
