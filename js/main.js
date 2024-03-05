@@ -156,7 +156,7 @@ const addBook = (arrBooks) => {
     id,
     title.value,
     author.value,
-    year.value,
+    parseInt(year.value),
     isComplete.checked
   );
   arrBooks.push(obj);
@@ -240,11 +240,11 @@ document.addEventListener(RENDER_EVENT, () => {
     }
   });
   if (finishContainer.innerHTML.trim() === "") {
-    finishContainer.innerHTML = '<h3 class="empty">-- Empty --</h3>';
+    finishContainer.innerHTML = '<h3 class="empty">Empty</h3>';
 }
 
 if (unfinishContainer.innerHTML.trim() === "") {
-    unfinishContainer.innerHTML = '<h3 class="empty">-- Empty --</h3>';
+    unfinishContainer.innerHTML = '<h3 class="empty">Empty</h3>';
 }
 
 });

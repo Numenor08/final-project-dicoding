@@ -11,7 +11,7 @@ function openEditModal(book) {
     okButton.onclick = function () {
       const newTitle = titleInput.value;
       const newAuthor = authorInput.value;
-      const newYear = yearInput.value;
+      const newYear = parseInt(yearInput.value);
       updateBook(book.id, { title: newTitle, author: newAuthor, year: newYear });
       modal.close();
     };
