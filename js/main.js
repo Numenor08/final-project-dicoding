@@ -186,31 +186,6 @@ function updateBook(bookId, updatedData) {
   save();
 }
 
-function searchBooks() {
-  const searchText = document.getElementById("search").value.toLowerCase();
-  const searchResults = arrBooks.filter((book) => {
-    return (
-      book.title.toLowerCase().includes(searchText) ||
-      book.author.toLowerCase().includes(searchText) ||
-      book.year.toLowerCase().includes(searchText)
-    );
-  });
-
-  const finishContainer = document.getElementById("finish");
-  const unfinishContainer = document.getElementById("unfinish");
-  finishContainer.innerHTML = "";
-  unfinishContainer.innerHTML = "";
-
-  searchResults.forEach((value) => {
-    const element = createBook(value);
-    if (value.isComplete) {
-      finishContainer.append(element);
-    } else {
-      unfinishContainer.append(element);
-    }
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   if (isStorageExist()) {
     loadData(arrBooks);
@@ -256,6 +231,5 @@ document.addEventListener(SAVED_EVENT, function () {
     setTimeout(function () {
       popup.classList.remove("show");
     }, 3000);
-    console.log(popup);
   }
 });
